@@ -1,21 +1,20 @@
 
 
 //getting the computer choice
-let computerChoice = function getComputerChoice (){
-
-
-const number = Math.random(3);
-if (number * 10 <= 3){
-    computerChoice = "rock";
+let computerChoice = function (choice){
+let number = Math.random() * 10;
+if (number <= 3){
+    choice = "rock";
 }
-else if(number * 10 >= 3 || number <=7){
-    computerChoice = "paper";
+else if(number <=5.9){
+    choice = "scissors";
 }
 
-else if (number * 10 >= 7) {
-    computerChoice = "scissors";
+else if (number >=6){
+    choice = "paper";
 }
-
+console.log(number)
+return choice;
 };
 
 
