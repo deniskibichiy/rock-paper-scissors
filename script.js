@@ -6,7 +6,7 @@ let number = Math.random() * 10;
 if (number <= 3){
     choice = "rock";
 }
-else if(number <=5.9){
+else if(number < 6){
     choice = "scissors";
 }
 
