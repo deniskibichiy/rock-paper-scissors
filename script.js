@@ -13,22 +13,11 @@ else if(number < 6){
 else if (number >=6){
     choice = "paper";
 }
-console.log(number)
 return choice;
 };
 
-
-/*
-function getResult(){
-    if (computerChoice == "paper"){
-        console.log("Paper wins")
-    }
-    else if (computerChoice = "rock") {
-        console.log("Rock wins")
-    }
-    else {
-        console.log("Scissors cut it!")
-    }
-} 
-
-getResult() */
+//logic to get human Choice
+let getHumanChoice = function(){
+    let humanChoice = prompt("Select one between rock, paper, and scissors").toLowerCase();
+    console.log(humanChoice);
+}
