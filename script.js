@@ -81,13 +81,11 @@ function playRound (humanChoice, computerChoice) {
     
     
      function playGame() {
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
         playRound(getHumanChoice(), getComputerChoice());
         playRound(getHumanChoice(), getComputerChoice());
         playRound(getHumanChoice(), getComputerChoice());
         playRound(getHumanChoice(), getComputerChoice());
-        //playRound(getHumanChoice(), getComputerChoice());
+        playRound(getHumanChoice(), getComputerChoice());
          if (humanScore > computerScore){
             console.log("Final Verdict: Human Wins");
          }
