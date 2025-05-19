@@ -1,4 +1,10 @@
-
+//store the reference to the div displaying results
+const divResults = document.querySelector('.results_div');
+//divResults.classList.add("divResults");
+const displayResult = document.createElement("div");
+displayResult.classList.add("displayResult");
+divResults.appendChild(displayResult);
+displayResult.textContent = "computer wins";
 
 //getting the computer choice
 let getComputerChoice = function() {
@@ -31,47 +37,47 @@ function playRound (humanChoice, computerChoice) {
             case "scissors":
                 // computer chooses rock: computer wins
                 if (computerChoice== "rock"){
-                console.log("Computer Wins!: Rock crashes Scissors.");
+                displayResult.textContent = "Computer Wins!: Rock crashes Scissors.";
                 computerScore +=1;
                 }
             // computer chooses paper: Human wins
                 else if (computerChoice == "paper") {
-                console.log("Human wins!: Scissors cut paper!");
+                displayResult.textContent = "Human wins!: Scissors cut paper!";
                 humanScore +=1;
                 }
             // computer chooses scissors: tie
                 else if (computerChoice== "scissors") {
-                console.log("It is a tie!");
+                displayResult.textContent = "It is a tie!";
                 };
             break;
             case "rock": //human chooses rock
             //Computer chooses rock: Tie
                 if ( computerChoice== "rock") {
-                console.log("It is a tie!");
+                displayResult.textContent = "It is a tie!";
                 } 
             //computer chooses paper: Computer wins
                 else if (computerChoice == "paper") {
-                console.log("Computer Wins!: Paper covers rock.")
+                displayResult.textContent ="Computer Wins!: Paper covers rock."
                 computerScore +=1;
                 }
             //Computer chooses scissors: Human wins
                 else if(computerChoice =="scissors"){
-                console.log("Human wins! Rock crashes scissors.");
+                displayResult.textContent = "Human wins! Rock crashes scissors.";
                 humanScore +=1;
                 }
             break;
             //Human chooses Paper
             case "paper":
                 if (computerChoice == "rock"){
-                    console.log("Human wins! Paper covers rock.");
+                    displayResult.textContent = "Human wins! Paper covers rock.";
                     humanScore += 1;
                 }
                 else if( computerChoice == "paper") {
-                    console.log("It is a tie!");
+                    displayResult.textContent = "It is a tie!";
                 }
                 else if(computerChoice == "scissors")
                 {
-                    console.log("Computer wins! Scissors cut papers.")
+                    displayResult.textContent = "Computer wins! Scissors cut papers."
                     computerScore =+1;
                 }
             
@@ -97,7 +103,5 @@ function playRound (humanChoice, computerChoice) {
          }
      }
   
-
-
 
 
