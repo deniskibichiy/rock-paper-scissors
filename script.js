@@ -93,15 +93,15 @@ function playRound (humanChoice, computerChoice) {
         playRound(getHumanChoice(), getComputerChoice());
         playRound(getHumanChoice(), getComputerChoice());
          if (humanScore > computerScore){
-            console.log("Final Verdict: Human Wins");
+            displayResult.textContent ="Final Verdict: Human Wins";
          }
          else if (computerScore > humanScore) {
-            console.log("Final verdict: Computer takes the day!")
+            displayResult.textContent ="Final verdict: Computer takes the day!";
          }
          else {
-            console.log("Final Verdict: It is a draw!")
+            displayResult.textContent ="Final Verdict: It is a draw!";
          }
-     }
+     };
   
 
 
