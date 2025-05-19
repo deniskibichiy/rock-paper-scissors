@@ -21,3 +21,9 @@ p{
     color: white;
     padding-top: 20px;
 }
+
+.condition {
+    background-color: white;
+    color: black;
+    width: 50%;
+}

@@ -14,6 +14,7 @@ const paperSelection = document.querySelector("#paper");
 const scissorsSelection = document.querySelector("#scissors");
 
 const para = document.createElement("p");
+divResults.appendChild(para);
 
 
 
@@ -102,15 +103,20 @@ let humanChoice;
 
  // to display the final result:
  function checkFinalResult() {
-    if (humanScore > computerScore){
+    
+    if (humanScore === 5 ){
         para.textContent ="Final Verdict: Human Wins";
+        humanScore = 0;
+        computerScore = 0;
         }
-    else if (computerScore > humanScore) {
+    else if (computerScore === 5) {
         para.textContent ="Final verdict: Computer takes the day!";
+        humanScore = 0;
+        computerScore = 0;
          }
     else {
-        para.textContent ="Final Verdict: It is a draw!";
+        para.textContent =" Game On! ";
+       // divResults.removeChild(para);
          };
-divResults.appendChild(para);
-        }
+        };
 
