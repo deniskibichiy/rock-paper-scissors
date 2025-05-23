@@ -7,7 +7,7 @@ const displayResult = document.createElement("div");
 
 displayResult.classList.add("displayResult");
 divResults.appendChild(displayResult);
-displayResult.textContent = "computer wins";
+//displayResult.textContent = "computer wins";
 
 const rockSelection = document.querySelector("#rock");
 const paperSelection = document.querySelector("#paper");
@@ -25,7 +25,7 @@ let getComputerChoice = function() {
 
 let number = Math.random() * 10;
 
-if (number <= 3){
+if (number >= 1 && number <= 3){
     computerChoice = "rock";
 }
 else if(number < 6){
@@ -109,6 +109,11 @@ let humanChoice;
         humanScore = 0;
         computerScore = 0;
         }
+    
+    else if (humanScore < 0 && computerScore < 0) {
+        para.textContent = " Click an option to start game.";
+    }
+
     else if (computerScore === 5) {
         para.textContent ="Final verdict: Computer takes the day!";
         humanScore = 0;
